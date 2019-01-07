@@ -104,7 +104,7 @@ class Reg: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource{
     }
     
     func loadHomeScreen(){
-       self.performSegue(withIdentifier: "goToMainPage", sender: self)
+       self.performSegue(withIdentifier: "GoToHomePage", sender: self)
     }
     
     

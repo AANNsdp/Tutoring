@@ -176,7 +176,7 @@
                         <outlet property="txtPass" destination="OzL-RH-aLv" id="3BW-2d-SaS"/>
                         <outlet property="txtPhone" destination="C73-hX-pxh" id="Fgn-V7-jLx"/>
                         <outlet property="txtUserName" destination="6CS-eJ-0jw" id="41d-w1-OQc"/>
-                        <segue destination="XzH-e7-hts" kind="show" id="sGm-2d-0NL"/>
+                        <segue destination="XzH-e7-hts" kind="show" identifier="GoToHomePage" id="sGm-2d-0NL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5G-Hb-Xlj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -212,6 +212,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1T5-m2-ZnD">
+                                <rect key="frame" x="306" y="617" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="profile"/>
+                                <connections>
+                                    <segue destination="WgW-tS-uGB" kind="show" id="93m-IO-FxJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jWc-qh-ZzS"/>
@@ -223,6 +231,119 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qfq-BD-nZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="896.79999999999995" y="778.56071964017997"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="WXS-wP-jue">
+            <objects>
+                <viewController id="WgW-tS-uGB" customClass="ProfileViewController" customModule="Tutoring" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dy6-IF-d4e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQM-2i-USt">
+                                <rect key="frame" x="55" y="89" width="277" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bDZ-Hd-f4U">
+                                <rect key="frame" x="55" y="127" width="277" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j0H-5g-D3g">
+                                <rect key="frame" x="55" y="165" width="277" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aLM-Yu-dEb">
+                                <rect key="frame" x="54" y="279" width="277" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QVu-LT-ktJ">
+                                <rect key="frame" x="55" y="203" width="277" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="olz-fe-BXd">
+                                <rect key="frame" x="55" y="241" width="277" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y3F-AR-YlX">
+                                <rect key="frame" x="52" y="360" width="280" height="88"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="pickerEducation"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DY9-JC-hSE">
+                                <rect key="frame" x="302" y="41" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="btnEditPressed:" destination="WgW-tS-uGB" eventType="touchUpInside" id="Y6s-zV-dBd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIa-A8-hC7">
+                                <rect key="frame" x="176" y="568" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="btnSavePressed:" destination="WgW-tS-uGB" eventType="touchUpInside" id="UrA-CM-LCf"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c7-gV-64i">
+                                <rect key="frame" x="52" y="464" width="280" height="96"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="567938577.40470004">
+                                    <!--2018-12-31 08:42:57 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-3187255272">
+                                    <!--1900-01-01 11:18:48 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="315486000">
+                                    <!--2010-12-31 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uTb-UA-sbf">
+                                <rect key="frame" x="54" y="322" width="277" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Ysd-I7-MZT"/>
+                    </view>
+                    <connections>
+                        <outlet property="PickerEducation" destination="Y3F-AR-YlX" id="Rif-ta-ITK"/>
+                        <outlet property="btnEdit" destination="DY9-JC-hSE" id="n0s-3h-oF2"/>
+                        <outlet property="btnSave" destination="WIa-A8-hC7" id="ATG-qz-nzX"/>
+                        <outlet property="pickerDate" destination="8c7-gV-64i" id="9pP-m1-ze5"/>
+                        <outlet property="txtDate" destination="uTb-UA-sbf" id="Kj4-RC-yQZ"/>
+                        <outlet property="txtEducation" destination="aLM-Yu-dEb" id="o9L-9i-G9R"/>
+                        <outlet property="txtEmail" destination="bDZ-Hd-f4U" id="6lo-lY-RH5"/>
+                        <outlet property="txtFirstName" destination="j0H-5g-D3g" id="0CZ-bM-4Y6"/>
+                        <outlet property="txtLastName" destination="QVu-LT-ktJ" id="TZt-Oc-Jcw"/>
+                        <outlet property="txtPhone" destination="olz-fe-BXd" id="cpU-sd-vcl"/>
+                        <outlet property="txtUserName" destination="XQM-2i-USt" id="TyW-LY-aim"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cUO-gr-FMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1172" y="1522.488755622189"/>
         </scene>
         <!--Become Tutor View Controller-->
         <scene sceneID="WQf-Qx-A2g">

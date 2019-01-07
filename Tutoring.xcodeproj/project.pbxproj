@@ -24,6 +24,7 @@
 		E68A0E6921DB5D6C000576D6 /* ckboxchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = E68A0E6721DB5D6C000576D6 /* ckboxchecked.png */; };
 		E68A0E6A21DB5D6C000576D6 /* ckboxunchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = E68A0E6821DB5D6C000576D6 /* ckboxunchecked.png */; };
 		E68A0E6C21E340E3000576D6 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68A0E6B21E340E3000576D6 /* CheckBox.swift */; };
+		E68A0E6E21E34DF6000576D6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68A0E6D21E34DF6000576D6 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		E68A0E6721DB5D6C000576D6 /* ckboxchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ckboxchecked.png; sourceTree = "<group>"; };
 		E68A0E6821DB5D6C000576D6 /* ckboxunchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ckboxunchecked.png; sourceTree = "<group>"; };
 		E68A0E6B21E340E3000576D6 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		E68A0E6D21E34DF6000576D6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EA633B91CE0994DA220F848B /* Pods-Tutoring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutoring.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tutoring/Pods-Tutoring.release.xcconfig"; sourceTree = "<group>"; };
 		F3165EAD7FAEFEF7D06F3107 /* Pods-TutoringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutoringTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TutoringTests/Pods-TutoringTests.release.xcconfig"; sourceTree = "<group>"; };
 		FB2C148EAFC3FBBCCBB64B16 /* Pods-Tutoring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutoring.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tutoring/Pods-Tutoring.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				E68A0E2121D9FE45000576D6 /* AppDelegate.swift */,
 				E68A0E2321D9FE45000576D6 /* ViewController.swift */,
 				E68A0E2521D9FE45000576D6 /* Main.storyboard */,
+				E68A0E6D21E34DF6000576D6 /* ProfileViewController.swift */,
 				E68A0E5F21DB48EE000576D6 /* BecomeTutorViewController.swift */,
 				E68A0E2821D9FE46000576D6 /* Assets.xcassets */,
 				E68A0E2A21D9FE46000576D6 /* LaunchScreen.storyboard */,
@@ -472,6 +475,7 @@
 				E68A0E6C21E340E3000576D6 /* CheckBox.swift in Sources */,
 				E68A0E2221D9FE45000576D6 /* AppDelegate.swift in Sources */,
 				E68A0E6021DB48EE000576D6 /* BecomeTutorViewController.swift in Sources */,
+				E68A0E6E21E34DF6000576D6 /* ProfileViewController.swift in Sources */,
 				E68A0E5421DA1D60000576D6 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
