@@ -32,6 +32,8 @@ class ProfileViewController: UIViewController , UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var txtPass: UITextField!
     @IBOutlet weak var btnSave: UIButton!
     
+    // MARK: - Education level Picker is placed here
+    
     
     var selectedEducation : String = "Primary School"
     
@@ -52,6 +54,7 @@ class ProfileViewController: UIViewController , UIPickerViewDelegate, UIPickerVi
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         selectedEducation = EducationData[row]
+        //txtEducation.text = selectedEducation
         
     }
     
@@ -66,11 +69,12 @@ class ProfileViewController: UIViewController , UIPickerViewDelegate, UIPickerVi
         self.PickerEducation.delegate = self
         self.PickerEducation.dataSource = self
         EducationData = ["Primary School","Secondary School","High School","Bachelor","Master", "PHD"]
+        
     
 
         // Do any additional setup after loading the view.
     }
-    
+    // MARK: - Fill Data get the user current data
     func fillData()
     {
         var user = PFUser.current()
@@ -106,7 +110,7 @@ class ProfileViewController: UIViewController , UIPickerViewDelegate, UIPickerVi
 
         
     }
-    
+    // MARK: -
     @IBAction func btnEditPressed(_ sender: Any) {
         
         txtFirstName.isEnabled = true
@@ -124,17 +128,39 @@ class ProfileViewController: UIViewController , UIPickerViewDelegate, UIPickerVi
         
         var user = PFUser.current()
         user?.setValue(txtFirstName.text as! String, forKey: "fname")
-        
+        user?.setValue(txtLastName.text as! String, forKey: "lname")
+        user?.setValue(txtPhone.text as! String, forKey: "phone")
+        user?.setValue(txtEmail.text as! String, forKey: "email")
+        user?.setValue(pickerDate.date as! Date, forKey: "BirthDate")
+        user?.setValue(selectedEducation as! String, forKey: "educationLevel")
+
         do {
             try user?.save()
-            
+            disable()
+            fillData()
+
+        
         }
         catch {}
         
-        
+       
         
     }
     
+    func disable(){
+        
+        txtEmail.isEnabled = false
+        txtFirstName.isEnabled = false
+        txtLastName.isEnabled = false
+        txtPhone.isEnabled = false
+        txtDate.isEnabled = false
+        txtEducation.isEnabled = false
+        PickerEducation.isHidden = true
+        pickerDate.isHidden = true
+        
+        
+
+    }
     
     /*
     // MARK: - Navigation
