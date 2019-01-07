@@ -1,0 +1,26 @@
+PODS:
+  - Bolts/Tasks (1.9.0)
+  - DOCheckboxControl (2.0.0)
+  - Parse (1.17.2):
+    - Parse/Core (= 1.17.2)
+  - Parse/Core (1.17.2):
+    - Bolts/Tasks (~> 1.9)
+
+DEPENDENCIES:
+  - DOCheckboxControl
+  - Parse
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Bolts
+    - DOCheckboxControl
+    - Parse
+
+SPEC CHECKSUMS:
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  DOCheckboxControl: 49bf5b3a1e242e6b0efa4063e4a4ff038fd157dd
+  Parse: 3b31a3dd1777b07ee7f0caee32fafbff544483a5
+
+PODFILE CHECKSUM: b6ce5e28341835d9fad463e4f7811b0280c3812c
+
+COCOAPODS: 1.5.3
