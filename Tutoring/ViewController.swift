@@ -9,6 +9,8 @@
 import UIKit
 import Parse
 
+
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var btnLogin: UIButton!
@@ -18,6 +20,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //let image1 = UIImage(named: "image11")! as UIImage
+        //print("heeel")
+       // print(image1.size)
+        //print(image1.compressImage()?.size)
+        
+        
+        //var image11 = image1.jpegData(compressionQuality: 1)
+        //print(image11?.count)
+        
+        //var image2 = image1.jpegData(compressionQuality: 0)
+        //print(image2?.count)
+        PFUser.logOut()
+        
     }
     
     func displayErrorMessage(message:String) {

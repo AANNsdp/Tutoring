@@ -162,6 +162,24 @@
                                     <action selector="BtnRegClick:" destination="Knx-vc-gXR" eventType="touchUpInside" id="wgU-8i-jv1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wg-PN-rDD">
+                                <rect key="frame" x="55" y="474" width="126" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.34901960780000002" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="btnRegister"/>
+                                <color key="tintColor" red="0.55911255569999996" green="0.39492492689999997" blue="0.74888589390000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Select">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnRegClick:" destination="Knx-vc-gXR" eventType="touchUpInside" id="ed5-Oy-RWM"/>
+                                    <action selector="btnSelectImagePressed:" destination="Knx-vc-gXR" eventType="touchUpInside" id="0dT-YX-O5V"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B5W-wl-U9f">
+                                <rect key="frame" x="195" y="465" width="140" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fzS-tw-die"/>
@@ -169,7 +187,9 @@
                     <connections>
                         <outlet property="PickerDate" destination="4nC-uX-39V" id="1lK-cU-Q7I"/>
                         <outlet property="PickerEducation" destination="yZA-FF-iaJ" id="EJr-CL-gQs"/>
+                        <outlet property="ProfileImgView" destination="B5W-wl-U9f" id="u8M-aq-ycH"/>
                         <outlet property="btnRegister" destination="umu-M4-goD" id="dMD-YK-gIb"/>
+                        <outlet property="btnSelectImage" destination="2wg-PN-rDD" id="8FH-Am-gqy"/>
                         <outlet property="txtEmail" destination="3Z6-wu-rAV" id="NcW-Kl-ubL"/>
                         <outlet property="txtName1" destination="H8k-7X-gDO" id="6CP-B0-b94"/>
                         <outlet property="txtName2" destination="bXd-rw-YmK" id="ypc-Qk-Si2"/>
@@ -296,7 +316,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIa-A8-hC7">
-                                <rect key="frame" x="176" y="568" width="32" height="30"/>
+                                <rect key="frame" x="282" y="590" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="save"/>
                                 <connections>
@@ -304,7 +324,7 @@
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c7-gV-64i">
-                                <rect key="frame" x="52" y="464" width="280" height="96"/>
+                                <rect key="frame" x="53" y="456" width="280" height="96"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="567938577.40470004">
                                     <!--2018-12-31 08:42:57 +0000-->
@@ -323,12 +343,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QVh-h3-e4P">
+                                <rect key="frame" x="88" y="567" width="99" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ysd-I7-MZT"/>
                     </view>
                     <connections>
                         <outlet property="PickerEducation" destination="Y3F-AR-YlX" id="Rif-ta-ITK"/>
+                        <outlet property="ProfileImage" destination="QVh-h3-e4P" id="8eH-QZ-aQE"/>
                         <outlet property="btnEdit" destination="DY9-JC-hSE" id="n0s-3h-oF2"/>
                         <outlet property="btnSave" destination="WIa-A8-hC7" id="ATG-qz-nzX"/>
                         <outlet property="pickerDate" destination="8c7-gV-64i" id="9pP-m1-ze5"/>
@@ -459,7 +484,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzI-wT-anj">
-                                <rect key="frame" x="126" y="396" width="85" height="30"/>
+                                <rect key="frame" x="150" y="617" width="85" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.60784313729999995" green="0.34901960780000002" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="btnTutor"/>

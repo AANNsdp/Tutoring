@@ -17,6 +17,7 @@ class ProfileViewController: UIViewController , UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var txtFirstName: UITextField!
     @IBOutlet weak var txtDate: UITextField!
     
+    @IBOutlet weak var ProfileImage: UIImageView!
     
     @IBOutlet weak var txtLastName: UITextField!
     
@@ -87,12 +88,14 @@ class ProfileViewController: UIViewController , UIPickerViewDelegate, UIPickerVi
         var dateOfBirth =  user?["BirthDate"]
         var Education =  user?["educationLevel"]
         var phone =  user?["phone"]
-        
+        var image = user?["ProfileImage"]
+       
         txtEmail.text = email as! String
         txtLastName.text = name2 as! String
         txtFirstName.text = name1 as! String
         txtPhone.text = phone as! String
         txtEducation.text = Education as! String
+        
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -103,11 +106,23 @@ class ProfileViewController: UIViewController , UIPickerViewDelegate, UIPickerVi
         formatter.dateFormat = "dd-MM-yyyy"
         
         let mystringfd = formatter.string(from: yourDate!)
-        
-        
+    
         txtDate.text = mystringfd as! String
         txtUserName.text = userName as! String
-
+        
+         let userPic = image as? PFFileObject
+            
+        userPic!.getDataInBackground {(imageData: Data?, error: Error?)
+            in
+            if error != nil {
+                print(error?.localizedDescription)
+            }
+            else
+            {
+                let image = UIImage(data: imageData!)
+                self.ProfileImage.image = image
+            }
+        }
         
     }
     // MARK: -
